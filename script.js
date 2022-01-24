@@ -51,3 +51,6 @@ $(window).scroll(function() {
         compteur = 0;
     }
 });
+
+// AOS 
+AOS.init();
