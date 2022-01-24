@@ -91,12 +91,14 @@ h2 {
 }
 
 header .button {
-    margin-top: 40px;
+    margin: 40px auto 0 auto;
+    max-width: 234px;
 }
 
 header .button a {
     padding: 20px 80px;
     border: 1px solid #b3aca7;
+    text-decoration: none;
 }
 
 header .button:hover a {

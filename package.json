@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Alookin/CV#readme",
   "dependencies": {
+    "aos": "^2.3.4",
     "typed.js": "^2.0.12"
   }
 }
