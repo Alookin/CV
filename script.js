@@ -38,7 +38,7 @@ $(window).scroll(function() {
             countNum : countTo
             },
             {
-                duration : 1000,
+                duration : 4000,
                 easing : 'swing',
                 step: function() {
                     $this.text(Math.floor(this.countNum));
