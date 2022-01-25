@@ -512,7 +512,7 @@ footer h3 {
     border-radius: 50%;
 }
 
-.network:hover {
+.network:hover, textarea:hover, input:hover, .form-button:hover {
     background: #b3aca7;
     color: #e2dedb;
     transition: all 0.3s ease-in-out;
@@ -550,6 +550,49 @@ textarea {
     resize: none;
 }
 
+input::placeholder, 
+textarea::placeholder, 
+input:focus::placeholder, 
+textarea:focus::placeholder {
+color: #aca49c;
+}
+
+input:hover::placeholder, 
+textarea:hover::placeholder, 
+input:hover:focus::placeholder, 
+textarea:hover:focus::placeholder {
+    color: #e2dedb;
+}
+
+.form-button {
+    background: transparent;
+    border: solid 1px #b3aca7;
+    padding: 20px 75px;
+    margin: 14px 0 -20px 0;
+}
+
+.form-container h4 {
+    font-size: 2em;
+
+}
+
+#error-message {
+    color: red;
+    border: solid 1px red;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 15px 15px 8px 15px;
+    box-shadow: 0 0 5px red;
+}
+
+#success-message {
+    color: greenyellow;
+    border: solid 1px greenyellow;
+    max-width: 400px;
+    margin: 150px auto;
+    padding: 50px;
+    box-shadow: 0 0 5px greenyellow;
+}
 .arrow {
     /* width: 50px; */
     margin: -20 auto;
