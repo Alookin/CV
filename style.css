@@ -7,7 +7,7 @@ body {
 }
 
 h2, h3 {
-    letter-spacing: 1.2em;
+    letter-spacing: 1em;
     text-transform: uppercase;
     text-shadow: -1px -1px 1px #283655;
 }
@@ -113,7 +113,7 @@ header .button:hover a {
     padding: 80px 80px 80px 50px;
     margin: 20px 0 0 6%;
     height: 620px;
-    width: 47%;
+    width: 50%;
     max-width: 640px;
     background: linear-gradient(90deg,#a6c0fe 0%, rgba(246,128,132,0.41) 80%);
     clip-path: polygon(0 0, 100% 5%, 100% 95%, 0% 100%);
@@ -624,3 +624,124 @@ textarea:hover:focus::placeholder {
     transition: 0.5s ease-in-out;
     color: #726659;
 }
+
+ /*  **************** MEDIA QUERIES ****************** */
+
+ @media screen and (max-width: 900px) {
+
+    h2, h3 {
+        letter-spacing: 0.5em;
+    }
+     .infos h5, .typed {
+         font-size: 0.85em;
+     }
+
+     #langages {
+         margin-left: 1%;
+     }
+
+     #formation {
+         margin-right: 1%;
+     }
+
+     .network {
+         font-size: 2em;
+         padding: 10px 20px;
+     }
+ }
+
+ @media screen and (max-width: 770px) {
+     .navbar {
+         display: none!important;
+     }
+
+     .fixed-top {
+         position: unset !important;
+     }
+     h1, h2 {
+         font-size: 1.8em;
+     }
+
+     #langages {
+         width: 80%;
+         margin-left: 10%;
+     }
+
+     #formation {
+         margin: 210px 0 0 10%;
+         width: 80%;
+         float: none;
+         display: block;
+     }
+
+     .counter-value {
+         font-size: 1em;
+     }
+
+     .data-span {
+         font-size: .8em;
+     }
+
+     #parcours {
+         margin-top: -50px;
+     }
+
+     .legende p {
+         display: none;
+     }
+
+     #other-skills h3, #hobbies h3, footer h3 {
+         font-size: 2em;
+     }
+
+     .cloud {
+         font-size: 1.2em;
+     }
+
+     .flip-box-back p {
+         padding: 10px 0;
+     }
+
+     .network {
+         font-size: 1.4em;
+         padding: 14px 20px;
+     }
+
+     input, textarea {
+         width: 300px;
+     }
+
+ }
+
+ @media screen and (max-width: 520px) {
+     h1 {
+         padding-top: 20px;
+     }
+
+     h3 {
+         font-size: 1em !important;
+     }
+
+     #eni, #ocr {
+        padding: 50px 0 0 0;
+    }
+
+    .projet:nth-child(2), .projet:nth-child(3) {
+        margin-left: 0;
+    }
+
+    .legende {
+        opacity: 1;
+    }
+
+    #other-skills {
+        display: none;
+    }
+
+    #hobbies {
+        margin-top: -30px;
+    }
+    .flip-box-back p {
+        font-size: .7em;
+    }
+ }
