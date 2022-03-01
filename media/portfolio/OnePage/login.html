@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="login.css">
+        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+        <title>Login</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="formContainer">
+                <div class="sliderSection">
+                    <img src="img/dominik-schroder-FIKD9t5_5zQ-unsplash.jpg" alt="" >
+                    <div class="progression">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </div>
+                </div>
+                <div class="formSection">
+                    {% if error %}
+                <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
+
+            {% for message in app.flashes('notice') %}
+                <div class="alert alert-info">{{ message }}</div>
+            {% endfor %}
+
+            {% if app.user %}
+                <div class="mb-3">
+                    You are logged in as {{ app.user.firstname }}, <a href="{{ path('app_logout') }}">Logout</a>
+                </div>
+            {% endif %}
+                    <h1>Well & Good Mamene</h1>
+                    <div class="inputRow">
+                        <div class="inputIcon">
+                            <i class='bx bxs-envelope'></i>
+                        </div>
+                        <input type="email" value="{{ last_username }}" name="email" placeholder="Email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+                    </div>
+                    <div class="inputRow">
+                        <div class="inputIcon">
+                            <i class='bx bxs-lock-alt' ></i>
+                        </div>
+                        <input type="password" name="password" placeholder="Mot de passe" id="inputPassword" class="form-control" autocomplete="current-password" required>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <input type="checkbox" name="rememberMer" id="rememberMe">
+                            <label for="rememberMe">Remember me</label>
+                        </div>
+                        <a href="{{ path('reset_password') }}" id="forgotPassword">Mot de passe oublié ?</a>
+                    </div>
+                    <div class="btnRow">
+                        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+                    </div>
+                    <div class="btnRow">
+                        <a href="{{ path('register') }}">Créer un compte ?</a>                    </div>
+                    <h4> Ou se connecter avec :</h4>
+                    <div class="btnRow">
+                        <a href="#" class="btn btnGroup">
+                            <img src="https://img.icons8.com/fluency/48/000000/facebook.png"/>Facebook
+                        </a>
+                        <a href="#" class="btn btnGroup">
+                            <img src="https://img.icons8.com/fluency/48/000000/google-logo.png"/>Google
+                        </a>
+                        <a href="#" class="btn btnGroup">
+                            <img src="https://img.icons8.com/fluency/48/000000/github.png"/>Github
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="#"></a>
+        </div>
+    </body>
+</html>

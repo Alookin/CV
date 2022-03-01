@@ -1,0 +1,185 @@
+Test carousel.js :
+
+class Carousel {
+
+    /**
+     * 
+     * @param {HTMLElement} element 
+     * @param {Object} options 
+     * @param {Object} options.slidesToScroll Nombre d'éléments à faire défiler
+     * @param {Object} options.slidesVisible Nombre d'éléments visible dans un slide
+     */
+    constructor(element, options = {}) {
+        this.element = element
+        this.options = Object.assign({}, {
+            slidesToScroll: 1,
+            slidesVisible: 1
+        }, options)
+        let children = [].slice.call(element.children)
+        this.currentSlide = 0
+        this.root = this.createDivWithClass('carousel')
+        this.container = this.createDivWithClass('carousel__container')
+        this.root.appendChild(this.container)
+        this.element.appendChild(this.root)
+        this.items = children.map((child) => {
+            let item = this.createDivWithClass('carousel__item')
+            item.appendChild(child)
+            this.container.appendChild(child)
+            return item
+        })
+        this.setStyle()
+        this.createNavigation()
+    }
+    /**
+     * Applique les bonnes dimensions aux éléments du carousel
+     */
+    setStyle () {
+        let ratio = this.items.length / this.slidesVisible
+        this.container.style.width = (ratio * 100) + '%'
+        this.items.forEach(item => item.style.widht = ((100 / this.options.slidesVisible) / ratio) + '%')
+    }
+
+    createNavigation() {
+        let nextButton = this.createDivWithClass('carousel__next')
+        let prevButton = this.createDivWithClass('carousel__prev')
+        this.root.append(nextButton)
+        this.root.append(prevButton)
+        nextButton.addEventListener('click', this.next.bind(this))
+        prevButton.addEventListener('click', this.prev.bind(this))
+    }
+
+    next () {
+
+        this.goToItem(this.currentSlide + this.options.slidesToScroll )
+        
+    }
+
+    prev () {
+
+        this.goToItem(this.currentSlide - this.options.slidesToScroll )
+
+    }
+    /**
+     * Déplace le carousel vers l'élément ciblé
+     * @param {number} index 
+     */
+    goToItem (index) {
+        if (index < 0) {
+            index = this.items.length - this.options.slidesVisible
+        }
+        let translateX = index * -100 / this.items.length
+        this.container.style.transform = 'translate3d(' + translateX + '%, 0, 0)'
+        this.currentSlide = index
+    }
+
+    /**
+     * 
+     * @param {string} className 
+     * @returns {HTMLElement} 
+     */
+    createDivWithClass (className) {
+        let div = document.createElement('div')
+        div.setAttribute('class', className)
+        return div
+    }
+} 
+
+document.addEventListener('DOMContentLoaded', function() {
+
+
+   new Carousel(document.querySelector('#carousel'), {
+    slidesToScroll: 2,
+    slidesVisible: 3
+    }) 
+})
+
+carousel html :
+
+<div class="container">
+        <div class="title">Projets</div>
+        <div id="carousel">
+            <div class="carousel__container" id="carousel__container">
+                <div class="carousel__item" id="carousel__item">
+                    <div class="item__image" id="item__image">
+                        <img src="/img/AK47.jpg" alt="">
+                    </div>
+                    <div class="item__body" id="item__body">
+                        AK-47
+                    </div>
+                    <div class="item__description" id="item__description">
+                        une description au pif
+                    </div>
+                </div>
+                <div class="carousel__item" id="carousel__item">
+                    <div class="item__image" id="item__image">
+                        <img src="/img/AK47.jpg" alt="">
+                    </div>
+                    <div class="item__body" id="item__body">
+                        AK-47
+                    </div>
+                    <div class="item__description" id="item__description">
+                        une description au pif
+                    </div>
+                </div>
+                <div class="carousel__item" id="carousel__item">
+                    <div class="item__image" id="item__image">
+                        <img src="/img/AK47.jpg" alt="">
+                    </div>
+                    <div class="item__body" id="item__body">
+                        AK-47
+                    </div>
+                    <div class="item__description" id="item__description">
+                        une description au pif
+                    </div>
+                </div>
+            </div>
+            <div class="carousel__next" id="carousel__next"></div>
+            <div class="carousel__prev" id="carousel__prev"></div>
+        </div>
+    </div>
+
+carousel css : 
+
+/*
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel__container {
+    transition: transform 0.3s;
+    transform: translate3d(0, 0, 0);
+}
+
+.carousel__container::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.carousel__item {
+    float: left;
+}
+
+.carousel__next, .carousel__prev {
+    width: 40px;
+    height: 40px;
+    background: #fff url(/img/right-arrow-alt-regular-24.png) ;
+    background-size: 20px 20px;
+    border-radius: 50%;
+    margin-top: -20px;
+    right: 0px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.carousel__next:hover, .carousel__prev:hover {
+    transition: scale(1.2);
+}
+
+.carousel__prev {
+    background-image: url(/img/left-arrow-alt-regular-24.png);
+    right: auto;
+    left: -20px;
+}
+*/

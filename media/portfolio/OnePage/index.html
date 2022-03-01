@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Well And Good.</title>
+</head>
+<body>
+    <div class="promo">
+        <span>
+           10% sur votre première commande 
+        </span>
+    </div>
+    <header class="header">
+        <nav class="nav container">
+            <div class="navigation d-flex">
+                <div class="icon1">
+                    <i class='bx bx-menu'></i>
+                </div>
+                <div class="logo">
+                    <a href="{{ path('home')}}"><span>W</span>ell & <span>G</span>ood.</a>
+                </div>
+                <div class="menu">
+                    <div class="top">
+                        <span class="close">Fermer  <i class='bx bx-x'></i></span>
+                    </div>
+                    <ul class="nav_list d-flex">
+                        <li class="nav-item">
+                            <a href="{{ path('home')}}" class="nav-link">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ path('products') }}" class="nav-link">Produits</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ path('contact') }}" class="nav-link">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">A propos</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="icons d-flex">
+                    <div>
+                        <i class='bx bx-user'></i>
+                    </div>
+                    <div>
+                        <i class='bx bx-shopping-bag'>
+                            <span class="align-center">
+                                0
+                            </span>
+                        </i>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="banniere">
+            <div class="banniere-content d-flex container">
+                <div class="left">
+                    <span class="subtitle">
+                        Offre spéciale
+                    </span>
+                    <h1 class="title">
+                        Pour tout achat de BZ1,<br>
+                         <span>Well and Good</span>
+                          vous offre un cendrier assorti !
+                    </h1>
+                    <a href="#" class ="btn">En profitez</a>
+                </div>
+                <div class="right">
+                    <img src="/img/cendrier-bz1-1024x1024 (1).png" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+<!-- Carousel à faire-->
+<!-- Fin du carousel -->
+    <section class="section">
+        <div class="title">
+            <h1>
+                <span>Meilleures</span> ventes
+            </h1>
+        </div>
+        <div class="center-product container">
+            <div class="product">
+                <div class="img-cover">
+                    <img src="img/AK47.jpg" alt="">
+                </div>
+                <p> AK-47</p>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <div class="price">8€</div>
+            </div>
+            <div class="product">
+                <div class="img-cover">
+                    <img src="img/bubleGum.jpg" alt="">
+                </div>
+                <p> AK-47</p>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <div class="price">8€</div>
+            </div>
+            <div class="product">
+                <div class="img-cover">
+                    <img src="img/HASH.jpg" alt="">
+                </div>
+                <p> AK-47</p>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <div class="price">8€</div>
+            </div>
+            <div class="product">
+                <div class="img-cover">
+                    <img src="img/HASH.jpg" alt="">
+                </div>
+                <p> AK-47</p>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <div class="price">8€</div>
+            </div>
+        </div>
+    </section>
+    <section class="section services">
+        <h4>Livraison - Expédition</h4>
+        <div class="service-center container">
+            <div class="service">                
+                <span class="icon"><i class='bx bxs-time-five'></i></span>
+                <span class="text">Commandes traitées en 24/48h. <br>
+                    <bold>7j/7 de 8h à 20h.</bold>
+                   </span>
+            </div>
+            <div class="service">                
+                <span class="icon"><i class='bx bx-credit-card'></i></span>
+                <span class="text"> Livraison gratuite à partir de 80€ d’achat.</span>
+            </div>
+            <div class="service">                
+                <span class="icon"><i class='bx bxs-map'></i></span>
+                <span class="text">Livraison gratuite sur les communes d’Epinal (88000)
+                    et de Golbey (88190) sans minimum d’achat.</span>
+            </div>
+            <div class="service">                
+                <span class="icon"><i class='bx bx-wallet'></i></span>
+                <span class="text"> Paiements à la livraison possible sur les communes d’Epinal (88000)
+                    et de Golbey (88190).</span>
+            </div>
+            <div class="service">                
+                <span class="icon"><i class='bx bxs-truck' ></i></span>
+                <span class="text">Expéditions Colissimo ou lettres suivies 24/48h à 5,50€
+                    pour le reste de la France.</span>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="title">
+            <h1>
+                Découvrir nos <span>Nouveautés</span>
+            </h1>
+        </div>
+        <div class="center-product container">
+            <div class="product">
+                <div class="img-cover">
+                    <img src="img/AK47.jpg" alt="">
+                </div>
+                <p> AK-47</p>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <div class="price">8€</div>
+            </div>
+            <div class="product">
+                <div class="img-cover">
+                    <img src="img/bubleGum.jpg" alt="">
+                </div>
+                <p> AK-47</p>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <div class="price">8€</div>
+            </div>
+            <div class="product">
+                <div class="img-cover">
+                    <img src="img/HASH.jpg" alt="">
+                </div>
+                <p> AK-47</p>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <div class="price">8€</div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-center">
+                    <h3>Paiement</h3>
+                    <p>Les paiements effectués sur notre site sont sécurisés via <a href="">Viva Wallet</a>  afin de vous permettre de faire vos achats en toute sécurité.</p>
+                </div>
+                <div class="footer-center">
+                    <h3>A propos</h3>
+                    <a href="#">Mentions légales</a><br>
+                    <a href="#">Poltique de confidentialité</a><br>
+                    <a href="#">Conditions générales de ventes</a>
+                </div>
+                <div class="footer-center">
+                    <h3>Nous contacter</h3>
+                    <div>
+                        <span><i class='bx bx-mail-send'></i><a href="#"> Par mail</a></span>
+                        <p><i class='bx bxs-phone'></i> Par téléphone : 06 26 81 98 51</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            Copyright ©2021 Well & Good. Tous droits réservés.
+        </div>
+    </footer>
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

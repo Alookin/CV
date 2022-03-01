@@ -16,7 +16,7 @@ window.addEventListener('scroll', function() {
 
 // TYPED
 var typed2 = new Typed('.typed', {
-    strings: ['Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati saepe quia consectetur veniam culpa repellendus hic porro? Fugit ipsa nemo, iure quas, totam ex hic quibusdam aspernatur libero asperiores rem? At officiis omnis alias repudiandae. Tempore necessitatibus doloremque, corporis quaerat ipsam commodi earum praesentium facilis neque dolor, dicta quas odit'],
+    strings: ['Mordu d\'informatique, j\'ai découvert le monde de la programmation il y a 3 ans de cela et n\'ai jamais cessé de vouloir en apprendre davantage. Polyvalent, je maîtrise les différentes étapes de la création d\'un site ou d\'une application web ; de la compréhension des besoins utilisateurs, au développement frontend et backend en passant par la maintenance.'],
     typeSpeed: 20,
     fadeOut: true,
     loop: false
